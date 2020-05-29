@@ -1,0 +1,105 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(245, 245, 245, 0.973);
+}
+
+header {
+    background: #333;
+	padding: 0px 0;
+}
+
+.logo {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 0px;
+    background-image: url(../img/codigo.PNG); 
+    background-size: cover;
+    background-position: center;
+}
+.logo img {
+    max-width:100px;
+    max-height:80px;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+}
+.logo p {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: white;
+    font-style: oblique;
+    font-weight: bold;
+}
+nav {
+    background: #333;
+}
+
+nav li {
+    padding-top: 2px;
+    padding-bottom:1px;
+    display: inline-block;
+    padding-right: 5px;
+}
+.li_home {
+    
+    background: linear-gradient(to bottom, #4CAF50 0%, #10EF10 50%,#4CAF50 100%);
+    border-radius: 3px;
+    border: 2px solid green;
+    padding-right: 0px;
+}
+.li_right {
+    float: right;
+    background: #333;
+}
+nav a {
+    text-transform: uppercase;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+	background-color: #555;
+}
+.li_home a:hover {
+    background-color: green;
+    
+}
+
+
+footer {
+    background: #111;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    height: 40px;
+}
+
+.mensagem_rodape {
+    font-size: 20px;
+	margin: 12px 0 0;
+}
+
+@media screen and (max-width: 480px) {
+    .logo p{
+        font-size: 30px;  
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+}
