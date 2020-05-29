@@ -116,7 +116,7 @@ footer {
       top: 0;
       */
     }
-    nav.responsive a {
+    nav.responsive .li_right a {
         /*
       float: none;
       */
