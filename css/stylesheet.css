@@ -46,7 +46,6 @@ nav li {
     padding-right: 5px;
 }
 .li_home {
-    
     background: linear-gradient(to bottom, #4CAF50 0%, #10EF10 50%,#4CAF50 100%);
     border-radius: 3px;
     border: 2px solid green;
@@ -70,24 +69,79 @@ nav a:hover {
 }
 .li_home a:hover {
     background-color: green;
-    
+}
+.menu_icon {
+    display: none;
+    font-size: 22px;
 }
 
 
 footer {
-    background: #111;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    color: white;
-    height: 40px;
+   background: #111;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   color: white;
+   height: 40px;
 }
 
 .mensagem_rodape {
     font-size: 20px;
 	margin: 12px 0 0;
 }
+
+@media screen and (max-width: 740px) {
+    .li_right {
+      display: none;
+    }
+    .menu_icon {
+
+      float: right;
+      display: block;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    /*
+    nav.responsive {position: relative;}
+    */
+    nav.responsive .icon {
+        display: block;
+        float: right;
+        
+        /*
+      position: absolute;
+      right: 0;
+      top: 0;
+      */
+    }
+    nav.responsive a {
+        /*
+      float: none;
+      */
+      display: block;
+      border: solid #555;
+      border-width: 1px;
+      /*
+      text-align: left;
+      */
+    }
+    nav.responsive .li_right {float: none;}
+    nav.responsive .li_right {
+      display: block;
+      width: 100%;
+      
+    }
+    nav.responsive .li_right li {
+        display: block;
+        text-align: left;
+    }
+    nav.responsive a:hover {
+        background-color: #555;
+    }
+}
+
 
 @media screen and (max-width: 480px) {
     .logo p{
