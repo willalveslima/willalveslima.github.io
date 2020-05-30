@@ -81,16 +81,9 @@ footer {
    position: fixed;
    bottom: 0;
    width: 100%;
-   /*
-   text-align: center;
-   */
    color: white;
-   
    scroll-padding-top: 2px;
    padding-bottom: 2px;
-   /*
-   height: 40px;
-   */
 }
 
 .mensagem_rodape {
@@ -137,29 +130,14 @@ footer {
 }
 
 @media screen and (max-width: 740px) {
-    /*
-    nav.responsive {position: relative;}
-    */
     nav.responsive .icon {
         display: block;
         float: right;
-        
-        /*
-      position: absolute;
-      right: 0;
-      top: 0;
-      */
     }
     nav.responsive .li_right a {
-        /*
-      float: none;
-      */
       display: block;
       border: solid #555;
       border-width: 1px;
-      /*
-      text-align: left;
-      */
     }
     nav.responsive .li_right {float: none;}
     nav.responsive .li_right {
@@ -176,18 +154,14 @@ footer {
     }
 }
 
-
 @media screen and (max-width: 480px) {
     .logo p{
         font-size: 30px;  
     }
-
     h1 {
         text-align: center;
     }
-
     nav {
         position: static;
     }
-
 }
