@@ -74,8 +74,20 @@ nav a:hover {
     display: none;
     font-size: 27px;
 }
-
-
+.citacao {
+    margin: 2% auto 2% auto;
+    width: 65%;
+}
+cite {
+    font-style: italic;
+    color: darkblue;
+    text-align: center;
+    font-size: large;
+}
+.autor-citacao {
+    margin-top: 1px;
+    text-align: right;
+}
 footer {
    background: #111;
    position: fixed;
