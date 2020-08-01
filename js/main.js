@@ -8,7 +8,12 @@ function menu_dropdown() {
     elemento.className = "";
   }
 }
+
+function aviso(){
+  window.alert('Página em construção!');
+}
+
+
 $(".li_right").addEventListener('click', function(event) {
     menu_dropdown();
-    window.alert("Página em construção!");
-})
+});
