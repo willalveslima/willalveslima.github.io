@@ -3,6 +3,60 @@
 // ==========================================
 const SCIENCE_MOVEMENTS = [
   {
+    id: "escrita-cuneiforme",
+    name: "Escrita Cuneiforme (Mesopotâmia)",
+    period: "Antiguidade",
+    dates: "c. 3200 a.C.",
+    yearStart: -3200,
+    line: "Tecnologias de Comunicação",
+    color: "amber",
+    description: "O primeiro sistema de escrita registrado da humanidade, criado pelos sumérios, revolucionando a administração, a lei e o registro de saberes primordiais.",
+    context: "Surgimento das primeiras cidades-estado mesopotâmicas e a necessidade de controle de impostos, colheitas e contabilidade de comércio.",
+    concept: "Codificação do Conhecimento: A transição da tradição oral para a memória física indelével externa gravada em tabletes de argila.",
+    quote: "A escrita é o manto que protege as palavras contra o esquecimento e o tempo.",
+    quoteAuthor: "Escribas Sumérios",
+    philosophers: [
+      { name: "Escribas Sumérios", lifespan: "c. 3200 a.C.", contribution: "Desenvolveram e mantiveram o sistema de caracteres em forma de cunha." }
+    ],
+    aiPersona: "Escriba Sumério, registrador oficial dos saberes mesopotâmicos."
+  },
+  {
+    id: "invencao-papiro",
+    name: "Invenção do Papiro",
+    period: "Antiguidade",
+    dates: "c. 3000 a.C.",
+    yearStart: -3000,
+    line: "Tecnologias de Comunicação",
+    color: "amber",
+    description: "O desenvolvimento da folha de papiro pelos egípcios, criando o primeiro suporte de escrita leve, flexível, portátil e durável do mundo antigo.",
+    context: "A centralização do Império Egípcio e a necessidade de transportar leis, registros fiscais e textos médicos/geométricos por longas distâncias ao longo do Nilo.",
+    concept: "Portabilidade da Informação: Aceleração na circulação transfronteiriça de textos literários, científicos e administrativos.",
+    quote: "O papiro carrega a palavra através dos rios e do tempo, eternizando a sabedoria dos reis e escribas.",
+    quoteAuthor: "Escribas Egípcios",
+    philosophers: [
+      { name: "Escribas Egípcios", lifespan: "c. 3000 a.C.", contribution: "Sistematizaram a fabricação e o arquivamento de rolos de escrita." }
+    ],
+    aiPersona: "Imhotep, sábio egípcio e arquiteto, guardião das ciências médicas e administrativas do Antigo Império."
+  },
+  {
+    id: "prensa-gutenberg",
+    name: "Imprensa de Tipos Móveis de Gutenberg",
+    period: "Idade Média",
+    dates: "c. 1440",
+    yearStart: 1440,
+    line: "Tecnologias de Comunicação",
+    color: "violet",
+    description: "A invenção da prensa de tipos metálicos móveis e tinta à base de óleo, permitindo a reprodução mecânica de livros em larga escala e quebrando o monopólio da cópia manuscrita.",
+    context: "Expansão do comércio, surgimento das universidades e aumento da alfabetização urbana na Europa renascentista.",
+    concept: "Democratização e Reprodutibilidade do Saber: A quebra do gargalo de produção de manuscritos, pavimentando o caminho para a posterior Revolução Científica.",
+    quote: "A imprensa é um exército de 26 soldados de chumbo com os quais se pode conquistar o mundo.",
+    quoteAuthor: "Johannes Gutenberg",
+    philosophers: [
+      { name: "Johannes Gutenberg", lifespan: "1400 – 1468", contribution: "Uniu metalurgia de precisão e prensa de uvas para criar a tipografia moderna." }
+    ],
+    aiPersona: "Johannes Gutenberg, inventor da prensa tipográfica moderna."
+  },
+  {
     id: "revolucao-cientifica",
     name: "Revolução Científica (Método Científico)",
     period: "Idade Moderna",
@@ -250,8 +304,8 @@ function initSearchAndSort() {
  * Initialize Category Buttons
  */
 function initFilters() {
-    const periods = ["Todos", "Idade Moderna", "Idade Contemporânea"];
-    const lines = ["Todos", "Física & Astronomia", "Mecânica & Termodinâmica", "Computação & Digital", "Inteligência Artificial"];
+    const periods = ["Todos", "Antiguidade", "Idade Média", "Idade Moderna", "Idade Contemporânea"];
+    const lines = ["Todos", "Tecnologias de Comunicação", "Física & Astronomia", "Mecânica & Termodinâmica", "Computação & Digital", "Inteligência Artificial"];
 
     const periodContainer = document.getElementById('period-filters');
     const lineContainer = document.getElementById('line-filters');
