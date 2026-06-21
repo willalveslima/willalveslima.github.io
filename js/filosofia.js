@@ -323,6 +323,7 @@ function initApiKeyForm() {
         if (key) {
             localStorage.setItem('gemini_api_key', key);
             updateKeyStatus(true);
+            renderDetails();
         } else {
             alert('Por favor, cole uma chave de API válida.');
         }
@@ -1030,7 +1031,7 @@ Instruções:
         chatLog.appendChild(responseDiv);
 
     } catch (err) {
-        console.error('Erro na conexão com o Gemini.');
+        console.error('Erro na conexão com o Gemini:', err);
         chatLog.removeChild(typingDiv);
         
         const errorDiv = document.createElement('div');
@@ -1039,7 +1040,7 @@ Instruções:
         const errBubble = document.createElement('div');
         errBubble.classList.add('chat-msg-bubble');
         errBubble.style.color = 'hsl(0, 75%, 55%)';
-        errBubble.textContent = 'Falha na conexão com a consciência da IA. Por favor, verifique se sua chave API é válida.';
+        errBubble.textContent = `Falha na conexão com a consciência da IA (${err.message}). Por favor, verifique se sua chave API é válida.`;
         errorDiv.appendChild(errBubble);
         
         chatLog.appendChild(errorDiv);
@@ -1108,8 +1109,8 @@ async function toggleQuoteSpeech(movement) {
         playWavUrl(wavUrl);
 
     } catch (err) {
-        console.error('Erro na síntese de voz.');
-        alert('Não foi possível carregar a citação falada da IA neste momento. Verifique sua chave de API.');
+        console.error('Erro na síntese de voz:', err);
+        alert(`Não foi possível carregar a citação falada da IA neste momento. Detalhes: ${err.message}`);
         setIsPlaying(false);
     }
 }
