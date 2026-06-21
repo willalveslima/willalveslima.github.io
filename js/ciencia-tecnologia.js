@@ -853,7 +853,7 @@ async function handleChatSubmit(chatLog, form) {
 
     try {
         const apiKey = getApiKey();
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${apiKey}`;
         
         const systemPrompt = `Você é o próprio cientista histórico/defensor de teoria científica: ${activeMovement.aiPersona}. 
 O marco correspondente é: "${activeMovement.name}". 
@@ -946,7 +946,7 @@ async function toggleQuoteSpeech(movement) {
     setIsPlaying(true);
 
     try {
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-tts:generateContent?key=${apiKey}`;
         const textToSpeak = `Citação de ${movement.quoteAuthor}: "${movement.quote}"`;
         
         const payload = {
