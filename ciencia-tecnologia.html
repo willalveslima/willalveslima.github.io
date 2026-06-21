@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronos Tech | Linha do Tempo de Ciência e Tecnologia</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore os grandes marcos da ciência e tecnologia da humanidade. Dialogue com avatares de cientistas históricos através da API do Gemini.">
+    <meta name="author" content="Willian Alves Lima">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    
+    <!-- Font Awesome (legacy v4.7.0) with SRI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- Top Bar Navigation -->
+        <header class="top-bar" style="justify-content: space-between;">
+            <a href="index.html" class="cta-btn" style="background: var(--bg-tertiary); border: 1px solid var(--border-color); color: var(--text-primary) !important; box-shadow: none;">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Voltar ao Currículo
+            </a>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema claro/escuro">
+                    <i class="fa fa-moon-o" aria-hidden="true"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Intro Header -->
+        <div style="margin-bottom: 2rem; text-align: center;">
+            <h1 style="display: inline-flex; align-items: center; gap: 0.75rem; justify-content: center; font-size: 2.2rem; margin-bottom: 0.5rem;">
+                <i class="fa fa-flask" aria-hidden="true" style="color: var(--accent-color);"></i> Chronos Tech
+            </h1>
+            <p style="max-width: 600px; margin: 0 auto; font-size: 0.95rem;">
+                Explore a evolução científica e tecnológica da humanidade e dialogue com avatares de cientistas históricos alimentados pela API do Gemini.
+            </p>
+        </div>
+
+        <!-- API Key Configuration Section -->
+        <section class="api-key-bar">
+            <div class="api-key-input-wrapper">
+                <i class="fa fa-key" aria-hidden="true" style="color: var(--accent-color);"></i>
+                <label for="gemini-key" style="font-weight: 600;">Chave de API do Gemini:</label>
+                <input type="password" id="gemini-key" class="api-key-input" placeholder="Cole sua chave API (AIzaSy...) aqui" aria-label="Chave API do Gemini">
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <button id="save-key-btn" class="cta-btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Salvar Chave</button>
+                <button id="clear-key-btn" class="cta-btn" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; background: hsl(0, 75%, 50%); color: white !important;">Limpar</button>
+                <span id="key-status" class="api-key-status" style="margin-left: 0.5rem;"></span>
+            </div>
+        </section>
+
+        <!-- Main Timeline Layout Grid -->
+        <div class="timeline-page-grid">
+            
+            <!-- Left Column: Filters and Timeline list -->
+            <section class="card">
+                <h2 style="font-size: 1.3rem; margin-bottom: 1.5rem;"><i class="fa fa-calendar" aria-hidden="true" style="margin-right: 0.5rem; color: var(--accent-color);"></i> Linha do Tempo</h2>
+                
+                <div class="filters-section">
+                    
+                    <!-- Search Input -->
+                    <div class="search-wrapper">
+                        <input type="text" id="search-input" class="search-input" placeholder="Buscar cientistas, descobertas, teorias...">
+                        <button id="search-clear" class="search-clear-btn" style="display: none;" aria-label="Limpar busca">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <!-- Chronological Order Toggle -->
+                    <div style="display: flex; justify-content: flex-end;">
+                        <button id="sort-toggle" class="filter-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; width: auto;">
+                            <i class="fa fa-sort" aria-hidden="true"></i>
+                            <span id="sort-label">Antigo &rarr; Novo</span>
+                        </button>
+                    </div>
+
+                    <!-- Period Filter -->
+                    <div class="filter-group">
+                        <span class="filter-label">Período Histórico:</span>
+                        <div id="period-filters" class="filter-buttons">
+                            <!-- Populated in JS -->
+                        </div>
+                    </div>
+
+                    <!-- Thematic Line Filter -->
+                    <div class="filter-group">
+                        <span class="filter-label">Eixo Tecnológico:</span>
+                        <div id="line-filters" class="filter-buttons">
+                            <!-- Populated in JS -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Active Timeline List -->
+                <div id="timeline-list-container" class="timeline-interactive">
+                    <!-- Populated in JS -->
+                </div>
+
+            </section>
+
+            <!-- Right Column: Detail Card and AI Chat -->
+            <section>
+                
+                <!-- Detailed Info Card -->
+                <div id="detail-card" class="card detail-card">
+                    <!-- Populated in JS -->
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer style="margin-top: 3rem;">
+            <p>&copy; 2026 Willian Alves Lima. Todos os direitos reservados.</p>
+            <cite>"A imaginação é mais importante que o conhecimento." &mdash; Albert Einstein</cite>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/ciencia-tecnologia.js"></script>
+</body>
+</html>
